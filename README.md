@@ -53,7 +53,8 @@ final RangerClientConfig rangerClientConfig = RangerClientConfig.builder()
                         .build())
                 .url(RANGER_URL)
                 .build();
-        rangerClient = new RangerClient(rangerClientConfig);
+
+RangerClient rangerClient = new RangerClient(rangerClientConfig);
 ```
 
 ### Start client
