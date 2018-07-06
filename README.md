@@ -96,10 +96,13 @@ This project is built using [Apache Maven](http://maven.apache.org/).
 
 Run the following command from the root of repository, to build the client JAR:
 - Clone the source:
+```
 $ git clone https://github.com/sumannewton/apache-ranger-client.git
+```
 - Build
+```
 $ mvn clean install
-
+```
 ## Bugs
 
 Bugs can be reported using Github issues.
