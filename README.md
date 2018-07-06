@@ -1,5 +1,4 @@
-# Apache-Ranger Client
-
+# Apache-Ranger Client  [![Build Status](https://travis-ci.com/sumannewton/apache-ranger-client.svg?branch=master)](https://travis-ci.com/sumannewton/apache-ranger-client)
 This project is a Java library for communicating with Apache Ranger API. Please refer [docs](https://cwiki.apache.org/confluence/display/RANGER/Index) for more details.
 
 ## Repo
