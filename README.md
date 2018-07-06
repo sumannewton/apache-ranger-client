@@ -2,10 +2,17 @@
 
 This project is a Java library for communicating with Apache Ranger API. Please refer [docs](https://cwiki.apache.org/confluence/display/RANGER/Index) for more details.
 
-## Using apache-ranger-client in your maven project
+## Repo
+```
+<repository>
+    <id>clojars</id>
+    <name>Clojars repository</name>
+    <url>https://clojars.org/repo</url>
+</repository>
+```
+## Dependency
 
-Add apache-ranger-client as a dependency:
-
+- Maven
 ```
 <dependency>
   <groupId>com.sumannewton</groupId>
@@ -13,7 +20,18 @@ Add apache-ranger-client as a dependency:
   <version>1.0</version>
 </dependency>
 ```
-
+- Leiningen
+```
+[com.sumannewton/apache-ranger-client "1.0"]
+```
+- Clojure CLI/deps.edn
+```
+com.sumannewton/apache-ranger-client {:mvn/version "1.0"}
+```
+- Gradle
+```
+compile 'com.sumannewton:apache-ranger-client:1.0'
+```
 Please look at [releases](https://github.com/sumannewton/apache-ranger-client/releases) page for more versions.
 
 ## Usage
@@ -38,7 +56,7 @@ final RangerClientConfig rangerClientConfig = RangerClientConfig.builder()
         rangerClient = new RangerClient(rangerClientConfig);
 ```
 
-#### Start client
+### Start client
 ```
 rangerClient.start();
 ```
