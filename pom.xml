@@ -45,7 +45,7 @@
 
     <properties>
         <feign.version>8.18.0</feign.version>
-        <jackson.version>2.9.10.4</jackson.version>
+        <jackson.version>2.10.0.pr1</jackson.version>
         <guava.version>18.0</guava.version>
         <lombok.version>1.16.6</lombok.version>
         <sl4j.version>1.7.12</sl4j.version>
