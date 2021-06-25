@@ -1,13 +1,15 @@
 package apache.ranger.client;
 
-import apache.ranger.client.api.*;
+import apache.ranger.client.api.PolicyApis;
+import apache.ranger.client.api.ServiceApis;
+import apache.ranger.client.api.UserApis;
 import apache.ranger.client.api.feign.PolicyFeignClient;
 import apache.ranger.client.api.feign.ServiceFeignClient;
 import apache.ranger.client.api.feign.UserFeignClient;
 import apache.ranger.client.config.RangerClientConfig;
 import apache.ranger.client.utils.ClientException;
+import apache.ranger.client.utils.RangerAuthHeadersInterceptor;
 import apache.ranger.client.utils.RangerErrorDecoder;
-import apache.ranger.client.utils.RangerHeadersInterceptor;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -90,7 +92,7 @@ public class RangerClient implements Client {
                 .decoder(decoder)
                 .client(new OkHttpClient())
                 .errorDecoder(new RangerErrorDecoder())
-                .requestInterceptor(new RangerHeadersInterceptor());
+                .requestInterceptor(new RangerAuthHeadersInterceptor(clientConfig.getAuthConfig().getUsername(), clientConfig.getAuthConfig().getPassword()));
     }
 
     /*
