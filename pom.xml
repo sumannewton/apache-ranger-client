@@ -7,7 +7,7 @@
 
     <groupId>com.sumannewton</groupId>
     <artifactId>apache-ranger-client</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>apache-ranger-client</name>
     <description>Client for Apache Ranger APIs</description>
     <url>https://github.com/sumannewton/apache-ranger-client.git</url>
