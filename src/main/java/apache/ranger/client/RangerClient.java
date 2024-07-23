@@ -1,9 +1,11 @@
 package apache.ranger.client;
 
 import apache.ranger.client.api.PolicyApis;
+import apache.ranger.client.api.RoleApis;
 import apache.ranger.client.api.ServiceApis;
 import apache.ranger.client.api.UserApis;
 import apache.ranger.client.api.feign.PolicyFeignClient;
+import apache.ranger.client.api.feign.RoleFeignClient;
 import apache.ranger.client.api.feign.ServiceFeignClient;
 import apache.ranger.client.api.feign.UserFeignClient;
 import apache.ranger.client.config.RangerClientConfig;
@@ -40,6 +42,9 @@ public class RangerClient implements Client {
     @Getter
     private PolicyApis policies;
 
+    @Getter
+    private RoleApis roles;
+
     private RangerClientConfig clientConfig;
 
     public RangerClient(RangerClientConfig clientConfig) {
@@ -73,6 +78,7 @@ public class RangerClient implements Client {
         users = new UserApis(feignBuilder().target(UserFeignClient.class, clientConfig.getUrl()));
         services = new ServiceApis(feignBuilder().target(ServiceFeignClient.class, clientConfig.getUrl()));
         policies = new PolicyApis(feignBuilder().target(PolicyFeignClient.class, clientConfig.getUrl()));
+        roles = new RoleApis(feignBuilder().target(RoleFeignClient.class, clientConfig.getUrl()));
     }
 
     @Override
