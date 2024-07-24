@@ -12,7 +12,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class RoleUser {
+public class RoleItem {
     private String name;
     private boolean isAdmin;
 
