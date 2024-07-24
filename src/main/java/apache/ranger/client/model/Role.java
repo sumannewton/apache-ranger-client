@@ -23,9 +23,9 @@ public class Role {
     private String name;
     private String description;
     private Map<String, Object> options;
-    private List<RoleItem> users;
-    private List<RoleItem> groups;
-    private List<RoleItem> roles;
+    private List<RoleMember> users;
+    private List<RoleMember> groups;
+    private List<RoleMember> roles;
 
     @Override
     public String toString() {
