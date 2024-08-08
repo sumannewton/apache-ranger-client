@@ -1,10 +1,8 @@
 *.classpath
 *.project
 .settings/
-*/target/**
+**/target/**
 .idea/*
-
-target
 
 *.iml
 *.iws
