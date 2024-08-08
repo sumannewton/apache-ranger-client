@@ -1,4 +1,4 @@
-# Apache-Ranger Client  [![Build Status](https://app.travis-ci.com/sumannewton/apache-ranger-client.svg?branch=master)](https://app.travis-ci.com/sumannewton/apache-ranger-client.svg?branch=master)
+# Apache-Ranger Client  [![Clojars Project](https://img.shields.io/clojars/v/com.sumannewton/apache-ranger-client.svg)](https://clojars.org/com.sumannewton/apache-ranger-client)
 This project is a Java library for communicating with Apache Ranger API. Please refer [docs](https://cwiki.apache.org/confluence/display/RANGER/Index) for more details.
 
 ## Repo
