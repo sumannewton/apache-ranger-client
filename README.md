@@ -89,6 +89,13 @@ rangerClient.getPolicies().getAllPoliciesByService("service");
 rangerClient.getPolicies().searchPolicies("service", "policySearch");
 ```
 
+### Create/Update/Get/Search Roles
+```
+Role role = rangerClient.getRoles().getRoleByName("data");
+role.getUsers().add(RoleMember.builder().name("member").build());
+rangerClient.getRoles().addUsersAndGroups(role.getId(), role);
+```
+
 ## Build Instructions
 
 This project is built using [Apache Maven](http://maven.apache.org/).
