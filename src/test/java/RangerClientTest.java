@@ -2,6 +2,8 @@ import apache.ranger.client.RangerClient;
 import apache.ranger.client.config.RangerAuthConfig;
 import apache.ranger.client.config.RangerClientConfig;
 import apache.ranger.client.model.Policy;
+import apache.ranger.client.model.Role;
+import apache.ranger.client.model.RoleMember;
 import apache.ranger.client.model.Service;
 import apache.ranger.client.model.User;
 import com.google.common.collect.Maps;
@@ -61,5 +63,12 @@ public class RangerClientTest {
         rangerClient.getPolicies().updatePolicy(1, Policy.builder().build());
         rangerClient.getPolicies().getAllPoliciesByService("service");
         rangerClient.getPolicies().searchPolicies("service", "policySearch");
+
+        /*
+        Create/Update/Get/Search Roles
+         */
+        Role role = rangerClient.getRoles().getRoleByName("data");
+        role.getUsers().add(RoleMember.builder().name("Shlpeng").build());
+        rangerClient.getRoles().addUsersAndGroups(role.getId(), role);
     }
 }
