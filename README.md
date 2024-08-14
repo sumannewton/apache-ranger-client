@@ -16,20 +16,20 @@ This project is a Java library for communicating with Apache Ranger API. Please 
 <dependency>
   <groupId>com.sumannewton</groupId>
   <artifactId>apache-ranger-client</artifactId>
-  <version>1.2</version>
+  <version>1.3</version>
 </dependency>
 ```
 - Leiningen
 ```
-[com.sumannewton/apache-ranger-client "1.2"]
+[com.sumannewton/apache-ranger-client "1.3"]
 ```
 - Clojure CLI/deps.edn
 ```
-com.sumannewton/apache-ranger-client {:mvn/version "1.2"}
+com.sumannewton/apache-ranger-client {:mvn/version "1.3"}
 ```
 - Gradle
 ```
-compile 'com.sumannewton:apache-ranger-client:1.2'
+compile 'com.sumannewton:apache-ranger-client:1.3'
 ```
 Please look at [releases](https://github.com/sumannewton/apache-ranger-client/releases) page for more versions.
 
