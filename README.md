@@ -1,4 +1,4 @@
-# Apache-Ranger Client  [![Build Status](https://app.travis-ci.com/sumannewton/apache-ranger-client.svg?branch=master)](https://app.travis-ci.com/sumannewton/apache-ranger-client.svg?branch=master)
+# Apache-Ranger Client  [![Clojars Project](https://img.shields.io/clojars/v/com.sumannewton/apache-ranger-client.svg)](https://clojars.org/com.sumannewton/apache-ranger-client)
 This project is a Java library for communicating with Apache Ranger API. Please refer [docs](https://cwiki.apache.org/confluence/display/RANGER/Index) for more details.
 
 ## Repo
@@ -16,20 +16,20 @@ This project is a Java library for communicating with Apache Ranger API. Please 
 <dependency>
   <groupId>com.sumannewton</groupId>
   <artifactId>apache-ranger-client</artifactId>
-  <version>1.0</version>
+  <version>1.2</version>
 </dependency>
 ```
 - Leiningen
 ```
-[com.sumannewton/apache-ranger-client "1.0"]
+[com.sumannewton/apache-ranger-client "1.2"]
 ```
 - Clojure CLI/deps.edn
 ```
-com.sumannewton/apache-ranger-client {:mvn/version "1.0"}
+com.sumannewton/apache-ranger-client {:mvn/version "1.2"}
 ```
 - Gradle
 ```
-compile 'com.sumannewton:apache-ranger-client:1.0'
+compile 'com.sumannewton:apache-ranger-client:1.2'
 ```
 Please look at [releases](https://github.com/sumannewton/apache-ranger-client/releases) page for more versions.
 
@@ -87,6 +87,13 @@ rangerClient.getPolicies().getPolicyByName("service", "policy");
 rangerClient.getPolicies().updatePolicy(1, Policy.builder().build());
 rangerClient.getPolicies().getAllPoliciesByService("service");
 rangerClient.getPolicies().searchPolicies("service", "policySearch");
+```
+
+### Create/Update/Get/Search Roles
+```
+Role role = rangerClient.getRoles().getRoleByName("data");
+role.getUsers().add(RoleMember.builder().name("member").build());
+rangerClient.getRoles().addUsersAndGroups(role.getId(), role);
 ```
 
 ## Build Instructions

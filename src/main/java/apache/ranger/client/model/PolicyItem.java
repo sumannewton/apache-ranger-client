@@ -21,6 +21,7 @@ public class PolicyItem {
     private List<PolicyItemAccess> accesses = Lists.newArrayList();
     private Set<String> users = Sets.newHashSet();
     private List<String> groups = Lists.newArrayList();
+    private List<String> roles = Lists.newArrayList();
     private List<PolicyItemCondition> conditions = Lists.newArrayList();
     private Boolean delegateAdmin;
 
@@ -30,6 +31,7 @@ public class PolicyItem {
                 "accesses=" + accesses +
                 ", users=" + users +
                 ", groups=" + groups +
+                ", roles=" + roles +
                 ", conditions=" + conditions +
                 ", delegateAdmin=" + delegateAdmin +
                 '}';
